@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--高级切割-->
+    <ul id="ulScores">
+        <li>85</li>
+        <li>76</li>
+        <li>92</li>
+        <li>61</li>
+    </ul>
+    <script>
+        //id自动变为全局变量
+        var html=ulScores.innerHTML;//获得id为ulScores的HTML内容
+        console.log(html);
+        //删除开头和结尾的<li>
+        html=html.replace(/^\s*<li>|<\/li>\s*$/ig,"");
+        console.log(html);
+        //按</li>空格<li>切割
+        var scores=html.split(/<\/li>\s*<li>/);
+        console.log(scores);
+        //sort 将数组降序排列
+        //scores.sort(function(a,b){return b-a;});//function函数
+        scores.sort((a,b)=>{return b-a;});//箭头函数
+        console.log(scores);
+        //拼接
+        html="<li>"+scores.join("</li><li>")+"</li>";
+        console.log(html);
+    </script>
+</body>
+</html>
