@@ -1,36 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="viewport" content="width:device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/base.css"/>
+    <title></title>
 </head>
 <body>
-    <!--高级切割-->
-    <ul id="ulScores">
-        <li>85</li>
-        <li>76</li>
-        <li>92</li>
-        <li>61</li>
-    </ul>
-    <script>
-        //id自动变为全局变量
-        var html=ulScores.innerHTML;//获得id为ulScores的HTML内容
-        console.log(html);
-        //删除开头和结尾的<li>
-        html=html.replace(/^\s*<li>|<\/li>\s*$/ig,"");
-        console.log(html);
-        //按</li>空格<li>切割
-        var scores=html.split(/<\/li>\s*<li>/);
-        console.log(scores);
-        //sort 将数组降序排列
-        //scores.sort(function(a,b){return b-a;});//function函数
-        scores.sort((a,b)=>{return b-a;});//箭头函数
-        console.log(scores);
-        //拼接
-        html="<li>"+scores.join("</li><li>")+"</li>";
-        console.log(html);
-    </script>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="d-flex justify-content-between">
+            <!-- 顶部logo -->
+            <div>
+                <img src="img/logo_muji_b.png" alt=""/>
+            </div>
+            <!-- 导航栏 -->
+            <div>
+                <ul class="d-flex">
+                    <li><a href="javascript:;" class="my_small">网络商城</a></li>
+                    <li><a href="javascript:;" class="my_small">店铺信息</a></li>
+                    <li><a href="javascript:;" class="my_small">生活良品研究所</a></li>
+                    <li><a href="javascript:;" class="my_small">问题咨询</a></li>
+                    <li><a href="javascript:;" class="my_small">人才招聘</a></li>
+                    <li><a href="javascript:;" class="my_small">店铺合作伙伴</a></li>
+                    <li><a href="javascript:;" class="my_small">企业情报</a></li>
+                    <li><a href="javascript:;" class="my_small">何谓无印良品</a></li>
+                </ul>
+            </div>
+            <!-- 搜索 -->
+            <div>
+                <img src="img/icon_search_b.png" alt=""/>
+            </div>
+        </header>
+        <!-- 主体 -->
+        <section>
+            <!-- 主体-图片-->
+            <div class="body-img">
+                <!-- 一张大图 -->
+                <div class="big-img">
+                    <img src="img/mujiweek_pc.jpg" alt=""/>
+                </div>
+                <!-- 四张小图-->
+                <div class="small-img">
+                    <ul class="d-flex justify-content-around">
+                        <li><a href="#"><img src="img/down_640.jpg" alt=""/></a></li>
+                        <li><a href="#"><img src="img/mujihotel_teaser.jpg" alt=""/></a></li>
+                        <li><a href="#"><img src="img/icon_sa.jpg" alt=""/></a></li>
+                        <li><a href="#"><img src="img/sale_cn_640.jpg" alt=""/></a></li>
+                    </ul>
+                </div>
+
+                <div class="body-content">
+                    <!-- 主体-产品 -->
+                    <div>
+                        <div class="">
+                            <p>
+                                <h6>产品</h6>
+                                <a href="#">网络商城 &gt;</a>
+                            </p>
+                        </div>
+                        <div class="">
+                        <div class="">
+                            <img src="img/man.jpg" alt=""/>男装
+                            <img src="img/woman.jpg" alt=""/>女装
+                            <img src="img/kids.jpg" alt=""/>童装
+                            <img src="img/bag.jpg" alt=""/>鞋包
+                            <img src="img/ACC.jpg" alt=""/>服装杂志
+                            <img src="img/neiyi.jpg" alt=""/>内衣
+                        </div>
+                        <hr/>
+                        <div class="">
+                            <img src="img/zhipin.jpg" alt=""/>织品
+                            <img src="img/jiaju.jpg" alt=""/>家具
+                            <img src="img/dianzi.jpg" alt=""/>电子产品
+                            <img src="img/chuju.jpg" alt=""/>居家用品
+                            <img src="img/wenju.jpg" alt=""/>文具
+                            <img src="img/weisheng.jpg" alt=""/>卫生 & 美容用品
+                            <img src="img/huwai.jpg" alt=""/>户外用品
+                        </div>
+                        <hr/>
+                        <div class="">
+                            食品
+                        </div>
+                        <hr/>
+                    </div>
+                </div>
+
+
+                <div><a href="#">更多 &gt;</a></div>
+            </div>
+            <!-- 主体-内容 -->
+            <!-- 主体-新到商品 -->
+            <div>
+
+            </div>
+    </div>
+        </section>
+        <!-- 底部 -->
+        <footer>
+
+        </footer>
+    </div>
 </body>
 </html>
